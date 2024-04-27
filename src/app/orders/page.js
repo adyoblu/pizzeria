@@ -71,7 +71,7 @@ export default function OrdersPage() {
                     {order.paid ? 'Paid' : 'Not paid'}
                   </div>
                 </td>
-                <td className="grow p-2 whitespace-nowrap">
+                <td className="grow">
                   <div className="flex gap-2 items-center mb-1">
                     <div className="grow">{order.userEmail}</div>
                     <div className="dark:text-black text-gray-500 text-sm">{dbTimeForHuman(order.createdAt)}</div>
