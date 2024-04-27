@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               </main>
               <Footer />
               <div className="mx-auto text-white text-center text-sm bg-darkred py-4 w-full">
-                <p>&copy; {currentYear} Mamma Mia's Pizzeria. All rights reserved.</p>
+                <p>&copy; {currentYear} Mamma Mia&apos;s Pizzeria. All rights reserved.</p>
               </div>
             </div>
           </AppProvider>
