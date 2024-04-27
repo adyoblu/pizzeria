@@ -12,7 +12,7 @@ export default function Footer(){
                 <div className="mb-4 md:mb-0">
                 <Image
                   src="/logofooter.png"
-                  alt="Mamma Mia's Pizza"
+                  alt="Mamma Mia Pizza"
                   layout="responsive"
                   width={500} // Replace with the natural width of your image
                   height={300} // Replace with the natural height of your image to maintain the aspect ratio
@@ -62,7 +62,7 @@ export default function Footer(){
           {/* Nav for smaller screens */}
           <nav className="container mx-auto flex md:hidden flex-col items-center justify-center space-y-4 mt-4">
             <div className="mb-4 md:mb-0 w-full md:w-auto container mx-auto flex flex-col md:flex-row justify-between items-center text-center">
-                <h2 className="text-3xl font-bold">Mamma Mia's Pizza</h2>
+                <h2 className="text-3xl font-bold">Mamma Mia&apos;s Pizza</h2>
                 <p className="text-sm">THE BEST PIZZA VALUE ANYWHERE</p>
                 <div className="flex justify-center space-x-4 mt-4">
                     <a href="https://www.facebook.com" className="hover:text-black hover:cursor-pointer">

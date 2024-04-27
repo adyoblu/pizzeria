@@ -34,7 +34,7 @@ export default function Home() {
       
       <section className="text-center my-8">
         <SectionHeaders 
-          subHeader={'Don\'t hesitate'} 
+          subHeader={'Are you hesitating?'} 
           mainHeader={'Contact us'} />
           
       </section>
