@@ -62,8 +62,8 @@ export default function OrdersPage() {
         <table className="min-w-full divide-y divide-gray-200">
           <tbody className="bg-white divide-y divide-gray-200">
             {orders?.length > 0 && orders.map((order) => (
-              <tr key={order._id} className="bg-gray-100 mb-2 p-4 rounded-lg">
-                <td className="p-2 whitespace-nowrap">
+              <tr key={order._id} className="bg-gray-100 mb-2 p-4 rounded-lg flex flex-col md:flex-row items-center gap-6">
+                <td className="grow flex flex-col md:flex-row items-center gap-6">
                   <div className={
                     (order.paid ? 'bg-green-500' : 'bg-red-400')
                     + ' rounded-md text-white w-24 text-center'
@@ -80,7 +80,7 @@ export default function OrdersPage() {
                     {order.cartProducts.map(p => p.name).join(', ')}
                   </div>
                 </td>
-                <td className="p-2 whitespace-nowrap">
+                <td className="justify-end flex gap-2 items-center whitespace-nowrap">
                   <Link href={"/orders/"+order._id} className="button dark:text-black">
                     Show order
                   </Link>
