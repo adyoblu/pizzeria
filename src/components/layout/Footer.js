@@ -10,7 +10,13 @@ export default function Footer(){
             <nav className="container mx-auto hidden md:flex md:justify-center md:items-start mt-4 w-full">
             <div className="mb-4 md:mb-0 w-full md:w-auto">
                 <div className="mb-4 md:mb-0">
-                    <img src="/logofooter.png" alt="Mamma Mia's Pizza" className="h-auto w-full md:w-auto mb-4" />
+                <Image
+                  src="/logofooter.png"
+                  alt="Mamma Mia's Pizza"
+                  layout="responsive"
+                  width={500} // Replace with the natural width of your image
+                  height={300} // Replace with the natural height of your image to maintain the aspect ratio
+                />
                 </div>
                 <div className="flex justify-center space-x-4 mt-4">
                     <a href="https://www.facebook.com" className="hover:text-black hover:cursor-pointer text-2xl">
