@@ -7,6 +7,8 @@ import Link from "next/link";
 import {useContext} from "react";
 import React, { useState, useEffect } from 'react';
 import ReactSwitch from "react-switch";
+import Image from 'next/image';
+
 /*
 Sub forma de tabele in admin:
 1) pe admin o metrica de cate ori s a intrat pe fiecare pagina
@@ -80,7 +82,13 @@ export default function Header({ darkMode, toggleTheme }) {
           <div className="flex items-center">
             <div>
               <Link href={'/'}>
-                <img src="/logo.png" alt="logo" style={{  height: '60px' }}/>
+              <Image
+                src="/logo.png"
+                alt="logo"
+                width={150}
+                height={60}
+                layout="fixed"
+              />
               </Link>
             </div>
             <nav className="hidden md:flex items-center gap-8 text-gray-300 font-semibold ml-8">

@@ -4,6 +4,7 @@ import {useProfile} from "@/components/UseProfile";
 import {dbTimeForHuman} from "@/libs/datetime";
 import Link from "next/link";
 import {useEffect, useState} from "react";
+import Image from 'next/image'
 
 export default function OrdersPage() {
   const [orders, setOrders] = useState([]);
@@ -30,7 +31,15 @@ export default function OrdersPage() {
       <div className="mt-8">
         {loadingOrders && (
             <div className="loading-container">
-              <img src="/Jalapenopizza.png" alt="Loading" className="pizza-spinner" />
+              <div className="pizzaSpinner">
+                <Image
+                  src="/Jalapenopizza.png"
+                  alt="Loading"
+                  width={100}
+                  height={100}
+                  className="pizza-spinner"
+                />
+              </div>
               <p className="dark: text-white">Loading user info...</p>
               <style jsx>{`
                 .loading-container {

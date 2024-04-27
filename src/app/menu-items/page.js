@@ -22,7 +22,15 @@ export default function MenuItemsPage() {
   if (loading) {
     return (
       <div className="loading-container">
-        <img src="/Jalapenopizza.png" alt="Loading" className="pizza-spinner" />
+        <div className="pizzaSpinner">
+            <Image
+              src="/Jalapenopizza.png"
+              alt="Loading"
+              width={100}
+              height={100}
+              className="pizza-spinner"
+            />
+          </div>
         <p className="dark: text-white">Loading items...</p>
         <style jsx>{`
           .loading-container {

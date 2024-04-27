@@ -3,6 +3,7 @@ import UserTabs from "@/components/layout/UserTabs";
 import {useProfile} from "@/components/UseProfile";
 import Link from "next/link";
 import {useEffect, useState} from "react";
+import Image from 'next/image'
 
 export default function UsersPage() {
 
@@ -20,7 +21,15 @@ export default function UsersPage() {
   if (loading) {
     return (
       <div className="loading-container">
-        <img src="/Jalapenopizza.png" alt="Loading" className="pizza-spinner" />
+        <div className="pizzaSpinner">
+            <Image
+              src="/Jalapenopizza.png"
+              alt="Loading"
+              width={100}
+              height={100}
+              className="pizza-spinner"
+            />
+        </div>
         <p className="dark: text-white">Loading users...</p>
         <style jsx>{`
           .loading-container {

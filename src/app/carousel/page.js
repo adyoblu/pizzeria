@@ -29,7 +29,15 @@ export default function CarouselPage() {
   if (profileLoading) {
     return (
       <div className="loading-container">
-        <img src="/Jalapenopizza.png" alt="Loading" className="pizza-spinner" />
+          <div className="pizzaSpinner">
+            <Image
+              src="/Jalapenopizza.png"
+              alt="Loading"
+              width={100}
+              height={100}
+              className="pizza-spinner"
+            />
+          </div>
         <p className="dark: text-white">Loading Images...</p>
         <style jsx>{`
           .loading-container {

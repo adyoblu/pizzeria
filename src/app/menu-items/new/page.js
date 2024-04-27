@@ -7,6 +7,7 @@ import Link from "next/link";
 import {redirect} from "next/navigation";
 import {useState} from "react";
 import toast from "react-hot-toast";
+import Image from 'next/image'
 
 export default function NewMenuItemPage() {
 
@@ -43,7 +44,15 @@ export default function NewMenuItemPage() {
   if (loading) {
     return (
       <div className="loading-container">
-        <img src="/Jalapenopizza.png" alt="Loading" className="pizza-spinner" />
+        <div className="pizzaSpinner">
+            <Image
+              src="/Jalapenopizza.png"
+              alt="Loading"
+              width={100}
+              height={100}
+              className="pizza-spinner"
+            />
+          </div>
         <p className="dark: text-white">Loading user info...</p>
         <style jsx>{`
           .loading-container {
