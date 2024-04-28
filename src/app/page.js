@@ -4,12 +4,64 @@ import Sliding from "../components/layout/Sliding"
 import HomeMenu from "../components/layout/HomeMenu"
 import SectionHeaders from "../components/layout/SectionHeaders"
 import Right from "@/components/icons/Right";
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
-    <div className="w-full md:h-[105vh] h-screen bg-cover relative bg-center md:px-[80px] px-8 py-[40px]" style={{ backgroundImage: 'url(antoine-barres.jpg)' }}>
-      </div>
+    <div className="w-full md:h-[105vh] h-screen bg-cover relative bg-center md:px-[80px] px-8 py-[40px]" style={{ backgroundImage: 'url(/antoine-barres.jpg)' }}>
+  {/* Moving clouds */}
+  <div
+    className="moving-clouds"
+    style={{
+      backgroundImage: "url('/clouds.png')",
+    }}
+  />
+
+  {/* Enlarged static fog effect */}
+  <div >
+    <Image src="/fog-low.png" alt="Fog" layout="fill" objectFit="cover" />
+  </div>
+
+  <div className="container2">
+    <h1 className="presentation-title">Mamma Mia Pizzeria</h1>
+  </div>
+  <div >
+    <Image src="/fog-low.png" alt="Fog" layout="fill" objectFit="cover" />
+  </div>
+
+</div>
+
+<style jsx global>{`
+  .moving-clouds {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    transform: translateX(-50%); /* Offset the clouds by half their width */
+    width: 100.625em;
+    height: 75.75em;
+    -webkit-animation: cloudLoop 80s linear infinite;
+    animation: cloudLoop 80s linear infinite;
+  }
+  
+  @-webkit-keyframes cloudLoop {
+    0% {
+      transform: translateX(-50%) translateX(0);
+    }
+    100% {
+      transform: translateX(-50%) translateX(-100%);
+    }
+  }
+  
+  @keyframes cloudLoop {
+    0% {
+      transform: translateX(-50%) translateX(0);
+    }
+    100% {
+      transform: translateX(-50%) translateX(-100%);
+    }
+  }
+`}</style>
     <div className="max-w-4xl mx-auto p-4">
       <Hero />
       <Sliding />

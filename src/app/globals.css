@@ -79,3 +79,27 @@ main {
 .darkText {
     color: white;
 }
+.container2 {
+  justify-content: center;
+}
+
+.presentation-title {
+  font-size: 6em;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  background: #fbf8ec;
+  background: -moz-linear-gradient(top, #ffffff 35%, #4e6773 100%);
+  background: -webkit-linear-gradient(top, #ffffff 35%, #4e6773 100%);
+  background: -ms-linear-gradient(top, #ffffff 35%, #4e6773 100%);
+  background: linear-gradient(to bottom, #ffffff 35%, #4e6773 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center; /* Center the text horizontally */
+}
+.content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
