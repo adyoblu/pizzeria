@@ -5,6 +5,7 @@ import HomeMenu from "../components/layout/HomeMenu"
 import SectionHeaders from "../components/layout/SectionHeaders"
 import Right from "@/components/icons/Right";
 import Image from 'next/image';
+import Contact from "@/components/layout/Contact";
 
 export default function Home() {
   return (
@@ -38,7 +39,7 @@ export default function Home() {
     z-index: 1;
     bottom: 0;
     transform: translateX(-50%); /* Offset the clouds by half their width */
-    width: 100.625em;
+    width: 80.625em;
     height: 75.75em;
     -webkit-animation: cloudLoop 80s linear infinite;
     animation: cloudLoop 80s linear infinite;
@@ -66,7 +67,7 @@ export default function Home() {
       <Hero />
       <Sliding />
       <HomeMenu />
-      <section className="text-center my-16">
+      <section id="about" className="text-center my-16">
         <SectionHeaders 
           subHeader={'Our story'} 
           mainHeader={'About us'} />
@@ -81,7 +82,7 @@ export default function Home() {
               Led by Mario, Nonna Lucia&apos;s grandson, Mamma Mia Pizzeria invites you to be part of our story. Join us for a slice, and let&apos;s make memories that linger long after the last bite.
             </p>
           </div>
-          <button className="flex items-center border-0 gap-2 py-2 text-gray-600 font-semibold dark:text-white">
+          <button className="flex items-center border-0 gap-2 py-2 text-gray-600 font-semibold dark:text-white" onClick={() => window.location.href='/about'}>
             Learn more
             <Right />
           </button>
@@ -92,6 +93,7 @@ export default function Home() {
           subHeader={'Are you hesitating?'} 
           mainHeader={'Contact us'} />
       </section>
+      <Contact />
     </div>
     </>
   )

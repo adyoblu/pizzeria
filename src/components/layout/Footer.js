@@ -2,6 +2,7 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 import React from 'react';
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function Footer(){
     return (
@@ -39,8 +40,8 @@ export default function Footer(){
               <div className="flex justify-around w-full max-w-2xl">
                 {/* Column 1 */}
                 <div className="flex flex-col space-y-4">
-                  <a href="#" className="text-sm hover:underline">FAQ</a>
-                  <a href="#" className="text-sm hover:underline">Contact Us</a>
+                  <Link href={'/faq'} className="text-sm hover:underline">FAQ</Link>
+                  <a href="/#contact" className="text-sm hover:underline">Contact Us</a>
                   <a href="#" className="text-sm hover:underline">Our Story</a>
                 </div>
                 {/* Column 2 */}
@@ -83,7 +84,7 @@ export default function Footer(){
                 </div>
             </div>
             {['FAQ', 'Contact Us', 'Our Story', 'Order Online', 'Careers', 'Privacy Policy', 'Terms & Conditions', 'Franchising', 'Nutrition', 'Ingredients Statements'].map((link, index) => (
-                <a key={index} href="#" className="text-sm hover:underline">{link}</a>
+                <a key={index} href="" className="text-sm hover:underline">{link}</a>
             ))}
           </nav>
         </footer>

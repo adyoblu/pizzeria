@@ -5,6 +5,7 @@ import "./globals.css";
 import {AppProvider} from "@/components/AppContext";
 import {Toaster} from "react-hot-toast";
 import {createContext, useState} from "react";
+import Contact from "@/components/layout/Contact";
 
 export const ThemeContext = createContext(null);
 
