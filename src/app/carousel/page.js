@@ -38,7 +38,7 @@ export default function CarouselPage() {
               className="pizza-spinner"
             />
           </div>
-        <p className="dark: text-white">Loading Images...</p>
+        <p className="text-primary dark:text-white">Loading Images...</p>
         <style jsx>{`
           .loading-container {
             display: flex;
@@ -62,7 +62,7 @@ export default function CarouselPage() {
     return 'Not an admin';
   }
   return (
-    <section className="mt-8 max-w-2xl mx-auto">
+    <section className="mt-8 max-w-2xl mx-auto p-4">
         <UserTabs isAdmin={true} />
         <form className="mt-8" onSubmit={handleCarouselSubmit}>
         <div>

@@ -8,6 +8,9 @@ import Right from "@/components/icons/Right";
 export default function Home() {
   return (
     <>
+    <div className="w-full md:h-[105vh] h-screen bg-cover relative bg-center md:px-[80px] px-8 py-[40px]" style={{ backgroundImage: 'url(antoine-barres.jpg)' }}>
+      </div>
+    <div className="max-w-4xl mx-auto p-4">
       <Hero />
       <Sliding />
       <HomeMenu />
@@ -37,6 +40,7 @@ export default function Home() {
           subHeader={'Are you hesitating?'} 
           mainHeader={'Contact us'} />
       </section>
+    </div>
     </>
   )
 }

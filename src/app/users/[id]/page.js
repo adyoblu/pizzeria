@@ -53,7 +53,7 @@ export default function EditUserPage() {
               className="pizza-spinner"
             />
         </div>
-        <p className="dark: text-white">Loading user info...</p>
+        <p className="text-primary dark:text-white">Loading user info...</p>
         <style jsx>{`
           .loading-container {
             display: flex;
@@ -79,7 +79,7 @@ export default function EditUserPage() {
   }
 
   return (
-    <section className="mt-8 mx-auto max-w-2xl">
+    <section className="mt-8 mx-auto max-w-2xl p-4">
       <UserTabs isAdmin={true} />
       <div className="mt-8">
         <UserForm user={user} onSave={handleSaveButtonClick} />

@@ -87,7 +87,7 @@ export default function CategoriesPage() {
               className="pizza-spinner"
             />
           </div>
-        <p className="dark: text-white">Loading categories...</p>
+        <p className="text-primary dark:text-white">Loading categories...</p>
         <style jsx>{`
           .loading-container {
             display: flex;
@@ -113,7 +113,7 @@ export default function CategoriesPage() {
   }
 
   return (
-    <section className="mt-8 max-w-2xl mx-auto">
+    <section className="mt-8 max-w-2xl mx-auto p-4">
       <UserTabs isAdmin={true} />
       <form className="mt-8" onSubmit={handleCategorySubmit}>
         <div className="flex gap-2 items-end">

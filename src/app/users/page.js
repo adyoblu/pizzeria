@@ -30,7 +30,7 @@ export default function UsersPage() {
               className="pizza-spinner"
             />
         </div>
-        <p className="dark: text-white">Loading users...</p>
+        <p className="text-primary dark:text-white">Loading users...</p>
         <style jsx>{`
           .loading-container {
             display: flex;
@@ -56,7 +56,7 @@ export default function UsersPage() {
   }
 
   return (
-    <section className="max-w-2xl mx-auto mt-8">
+    <section className="max-w-2xl mx-auto mt-8 p-4">
       <UserTabs isAdmin={true} />
       <div className="mt-8">
         {users?.length > 0 && users.map(user => (

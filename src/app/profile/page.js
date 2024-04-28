@@ -62,7 +62,7 @@ export default function ProfilePage() {
               className="pizza-spinner"
             />
           </div>
-          <p className="dark: text-white">Loading...</p>
+          <p className="text-primary dark:text-white">Loading...</p>
           <style jsx>{`
             .loading-container {
               display: flex;
@@ -88,7 +88,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <section className="mt-8">
+    <section className="mt-8 max-w-4xl mx-auto p-4">
       <UserTabs isAdmin={isAdmin} />
       <div className="max-w-2xl mx-auto mt-8">
         <UserForm user={user} onSave={handleProfileInfoUpdate} />

@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 export default function Sliding() {
   return (
-    <section className="md:mt-4 relative hidden md:block">
+    <section className="md:mt-4 relative hidden md:block my-16">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}

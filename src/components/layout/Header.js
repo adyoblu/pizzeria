@@ -133,6 +133,5 @@ export default function Header({ darkMode, toggleTheme }) {
         )}
       </div>
     </header>
-
   );
 }

@@ -31,7 +31,7 @@ export default function MenuItemsPage() {
               className="pizza-spinner"
             />
           </div>
-        <p className="dark: text-white">Loading items...</p>
+        <p className="text-primary dark:text-white">Loading items...</p>
         <style jsx>{`
           .loading-container {
             display: flex;
@@ -57,7 +57,7 @@ export default function MenuItemsPage() {
   }
 
   return (
-    <section className="mt-8 max-w-2xl mx-auto">
+    <section className="mt-8 max-w-2xl mx-auto p-4">
       <UserTabs isAdmin={true} />
       <div className="mt-8">
         <Link

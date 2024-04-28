@@ -15,7 +15,7 @@ export default function MenuPage() {
     });
   }, []);
   return (
-    <section className="mt-8">
+    <section className="mt-8 max-w-4xl mx-auto p-4">
       {categories?.length > 0 && categories.map(c => (
         <div key={c._id}>
           <div className="text-center">
