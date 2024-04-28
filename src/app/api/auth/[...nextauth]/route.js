@@ -1,4 +1,4 @@
-// import clientPromise from "../../../../libs/mongoconnect";
+import clientPromise from "../../../../libs/mongoconnect";
 import {UserInfo} from "@/models/UserInfo";
 import bcrypt from "bcrypt";
 import * as mongoose from "mongoose";
@@ -6,12 +6,15 @@ import {User} from "@/models/User"
 import NextAuth, {getServerSession} from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
-// import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 
 
 export const authOptions = {
   secret: process.env.SECRET,
-  // adapter: MongoDBAdapter(clientPromise),
+  adapter: MongoDBAdapter(clientPromise),
+  session: {
+    strategy: "jwt",
+  },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
