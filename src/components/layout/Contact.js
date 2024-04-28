@@ -8,7 +8,7 @@ export default function Contact() {
         <HeaderInfo>
           <Title>Let's get in touch</Title>
           <Description>
-            We're here to answer any questions you may have. Reach out to us and we'll respond as soon as we can.
+            We&apos;re here to answer any questions you may have. Reach out to us and we&apos;ll respond as soon as we can.
           </Description>
         </HeaderInfo>
         <Form>
