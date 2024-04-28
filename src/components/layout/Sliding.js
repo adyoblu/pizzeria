@@ -1,48 +1,45 @@
-'use client';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import React from "react";
-import Slider from "react-slick";
-import Image from "next/image";
+import React from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 export default function Sliding() {
-  return(
-    <section className="">
-      {/* <div className="grid sm:grid-cols-3 gap-4"> */}
-        {/* {bestSellers?.length > 0 && bestSellers.map(item => (
-          <CarouselItem key={item._id} {...item} />
-        ))} */}
-        
-      {/* </div> */}
+  return (
+    <section className="my-4">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        style={{ width: '100%', height: '369px' }}
+      >
+        <SwiperSlide style={{ height: '100%' }}><img src="/pizzeria.jpg" alt="Image 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></SwiperSlide>
+        <SwiperSlide><img src="/second.jpg" alt="Image 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></SwiperSlide>
+        <SwiperSlide><img src="/pizzeria.jpg" alt="Image 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></SwiperSlide>
+        <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
+          <img src="/frame1.jpg" alt="Image 1" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+          <img src="/frame2.jpg" alt="Image 2" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+        </SwiperSlide>
+        <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
+          <img src="/pizza1.jpg" alt="Image 1" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+          <img src="/pizza2.jpg" alt="Image 2" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+        </SwiperSlide>
+        <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
+          <img src="/pizza3.jpg" alt="Image 1" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+          <img src="/pizza4.jpg" alt="Image 2" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+        </SwiperSlide>
+      </Swiper>
     </section>
-  )
-    // var settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    //   };
-    //   return (
-    //     <Slider {...settings}>
-    //       <div>
-            
-    //       </div>
-    //       <div>
-    //         <h3>2</h3>
-    //       </div>
-    //       <div>
-    //         <h3>3</h3>
-    //       </div>
-    //       <div>
-    //         <h3>4</h3>
-    //       </div>
-    //       <div>
-    //         <h3>5</h3>
-    //       </div>
-    //       <div>
-    //         <h3>6</h3>
-    //       </div>
-    //     </Slider>
-    //   );
+  );
 }

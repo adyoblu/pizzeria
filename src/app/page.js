@@ -8,8 +8,8 @@ import Right from "@/components/icons/Right";
 export default function Home() {
   return (
     <>
-      <Hero />
       <Sliding />
+      <Hero />
       <HomeMenu />
       <section className="text-center my-16">
         <SectionHeaders 

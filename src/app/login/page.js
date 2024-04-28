@@ -31,8 +31,13 @@ export default function LoginPage() {
         <div className="my-4 text-center text-gray-500 dark:text-white">
           or login with provider
         </div>
+        <div className="dark:text-white">
+          <div>Admin account:</div>
+          <div>mail: ady@example.com </div>
+          <div>pass: example</div>
+        </div>
         <button type="button" onClick={() => signIn('google', {callbackUrl: '/'})}
-                className="flex gap-4 justify-center dark:text-white">
+                className="flex gap-4 justify-center bg-gray-100 text-black">
           <Image src={'/google.png'} alt={''} width={24} height={24} />
           Login with google
         </button>
