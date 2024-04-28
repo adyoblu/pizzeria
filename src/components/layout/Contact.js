@@ -6,7 +6,7 @@ export default function Contact() {
     <Wrapper id="contact">
       <Container>
         <HeaderInfo>
-          <Title>Let's get in touch</Title>
+          <Title>Let&apos;s get in touch</Title>
           <Description>
             We&apos;re here to answer any questions you may have. Reach out to us and we&apos;ll respond as soon as we can.
           </Description>
