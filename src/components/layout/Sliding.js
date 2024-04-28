@@ -8,13 +8,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
-// Import Next.js Image component
 import Image from 'next/image';
 
 export default function Sliding() {
   return (
-    <section className="my-4">
+    <section className="md:mt-4 relative hidden md:block">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}
