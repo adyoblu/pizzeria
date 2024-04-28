@@ -9,6 +9,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
+// Import Next.js Image component
+import Image from 'next/image';
+
 export default function Sliding() {
   return (
     <section className="my-4">
@@ -24,20 +27,35 @@ export default function Sliding() {
         }}
         style={{ width: '100%', height: '369px' }}
       >
-        <SwiperSlide style={{ height: '100%' }}><img src="/pizzeria.jpg" alt="Image 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></SwiperSlide>
-        <SwiperSlide><img src="/second.jpg" alt="Image 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></SwiperSlide>
-        <SwiperSlide><img src="/pizzeria.jpg" alt="Image 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></SwiperSlide>
-        <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src="/frame1.jpg" alt="Image 1" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
-          <img src="/frame2.jpg" alt="Image 2" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+        <SwiperSlide style={{ position: 'relative' }}>
+          <Image src="/pizzeria.jpg" alt="Pizzeria" layout='fill' objectFit='cover' />
+        </SwiperSlide>
+        <SwiperSlide style={{ position: 'relative' }}>
+          <Image src="/second.jpg" alt="Second Image" layout='fill' objectFit='cover' />
         </SwiperSlide>
         <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src="/pizza1.jpg" alt="Image 1" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
-          <img src="/pizza2.jpg" alt="Image 2" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+          <div style={{ width: '50%', position: 'relative' }}>
+            <Image src="/frame1.jpg" alt="Frame 1" layout='fill' objectFit='cover' />
+          </div>
+          <div style={{ width: '50%', position: 'relative' }}>
+            <Image src="/frame2.jpg" alt="Frame 2" layout='fill' objectFit='cover' />
+          </div>
         </SwiperSlide>
         <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src="/pizza3.jpg" alt="Image 1" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
-          <img src="/pizza4.jpg" alt="Image 2" style={{ width: '50%', height: 'auto', objectFit: 'cover' }} />
+          <div style={{ width: '50%', position: 'relative' }}>
+            <Image src="/pizza1.jpg" alt="Image 1" layout='fill' objectFit='cover' />
+          </div>
+          <div style={{ width: '50%', position: 'relative' }}>
+            <Image src="/pizza2.jpg" alt="Image 2" layout='fill' objectFit='cover' />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ width: '50%', position: 'relative' }}>
+            <Image src="/pizza3.jpg" alt="Image 3" layout='fill' objectFit='cover' />
+          </div>
+          <div style={{ width: '50%', position: 'relative' }}>
+            <Image src="/pizza4.jpg" alt="Image 4" layout='fill' objectFit='cover' />
+          </div>
         </SwiperSlide>
       </Swiper>
     </section>

@@ -22,26 +22,10 @@ export default function AddToCartButton({
       <button
         type="button"
         onClick={onClick}
-        className={`mt-4 bg-primary text-white rounded-full px-8 py-2 ${Math.random() < 0.5 ? 'jiggle' : 'pulse'}`}
+        className={`mt-4 bg-primary text-white rounded-full px-8 py-2`}
       >
         <span>Add to cart (from ${basePrice})</span>
       </button>
-      <style jsx>{`
-        @keyframes jiggle {
-          0%, 100% { transform: rotate(-3deg); }
-          50% { transform: rotate(3deg); }
-        }
-        @keyframes pulse {
-          0%, 100% { transform: scale(1); opacity: 1; }
-          50% { transform: scale(1.1); opacity: 0.9; }
-        }
-        .jiggle:hover {
-          animation: jiggle 0.1s ease-in-out infinite;
-        }
-        .pulse:hover {
-          animation: pulse 1s infinite;
-        }
-      `}</style>
     </>
   );
 }

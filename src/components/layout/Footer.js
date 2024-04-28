@@ -14,8 +14,8 @@ export default function Footer(){
                   src="/logofooter.png"
                   alt="Mamma Mia Pizza"
                   layout="responsive"
-                  width={500} // Replace with the natural width of your image
-                  height={300} // Replace with the natural height of your image to maintain the aspect ratio
+                  width={500}
+                  height={300}
                 />
                 </div>
                 <div className="flex justify-center space-x-4 mt-4">

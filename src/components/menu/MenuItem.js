@@ -55,7 +55,7 @@ export default function MenuItem(menuItem) {
       {showPopup && (
         <div
           onClick={() => setShowPopup(false)}
-          className="fixed inset-0 bg-black/80 flex items-center justify-center">
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
           <div
             onClick={ev => ev.stopPropagation()}
             className="my-8 bg-white p-2 rounded-lg max-w-md">
